@@ -1,0 +1,39 @@
+{
+  "appId": "com.sator.app",
+  "productName": "SATOR",
+  "directories": {
+    "output": "release",
+    "buildResources": "public/assets"
+  },
+  "files": [
+    "dist/**/*",
+    "electron/**/*",
+    "public/assets/**/*"
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "public/assets/generated/app-icon-transparent.dim_256x256.png"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "SATOR"
+  },
+  "mac": {
+    "target": ["dmg"],
+    "icon": "public/assets/generated/app-icon-transparent.dim_256x256.png",
+    "category": "public.app-category.education"
+  },
+  "linux": {
+    "target": ["AppImage"],
+    "icon": "public/assets/generated/app-icon-transparent.dim_256x256.png",
+    "category": "Education"
+  }
+}
